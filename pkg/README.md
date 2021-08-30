@@ -1,0 +1,1 @@
+This folder contains code which is OK for other services to consume, this may include API clients, or utility functions which may be handy for other projects but don’t justify their own project. Personally I prefer to use this over internal, mainly as I like to keep things open for reuse in most of projects.
