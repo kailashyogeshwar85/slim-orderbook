@@ -26,7 +26,7 @@ func (book *OrderBook) processLimitBuyOrder(order Order) []Trade {
 	// check if we have atleast one matching order
 	// first compare with last sell price
 	// loop only when the new order price is less than last sell price
-	if n != 0 || book.Asks[n-1].Price.LessThan(order.Price) {
+	if n != 0 || book.Asks[n-1].Price.LessThanOrEqual(order.Price) {
 		// traverse all orders that match
 		for i := n - 1; i >= 0; i-- {
 			sellOrder := book.Asks[i]
